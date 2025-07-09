@@ -1,0 +1,33 @@
+body         { font-family: Arial Narrow; font-size: 14pt; color: #FFFFFF }
+h1           { font-family: Arial Narrow; font-size: 18pt; color: #BAE042; font-weight: bold; }
+table        { background-color: #5C5959; }
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 980px) {
+  table  { width: 100%; }
+  img    { width: 240px; }
+  .title { margin-left: 50px; }
+  h1     { margin-left: 30px; }
+  .para  { margin-left: 50px; margin-right: 50px; }
+  }
+
+
+/* Tablet Styles */
+@media only screen and (min-width: 981px) and (max-width: 1280px) {
+  table  { width: 960px; }
+  img    { width: 360px; }
+  .title { margin-left: 50px; }
+  h1     { margin-left: 30px; }
+  .para  { margin-left: 50px; margin-right: 50px; }
+  }
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 1281px) {
+  table  { width: 960px; }
+  img    { width: 480px; }
+  .title { margin-left: 100px; }
+  h1     { margin-left: 60px; }
+  .para  { margin-left: 100px; margin-right: 100px; }
+  }
