@@ -1,33 +1,208 @@
-body         { font-family: Arial Narrow; font-size: 14pt; color: #FFFFFF }
-h1           { font-family: Arial Narrow; font-size: 18pt; color: #BAE042; font-weight: bold; }
-table        { background-color: #5C5959; }
+/* Google Font Import - Roboto Condensed is a good alternative to Arial Narrow */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 
+/* ------------------------------------------------------------------------------------------- */
+
+/*
+Table comparing rem, px and pt.
+If 1rem = 16px
+  0.75  rem = 12 px =  9   pt
+  0.875 rem = 14 px = 10.5 pt
+  1     rem = 16 px = 12   pt
+  1.125 rem = 18 px = 13.5 pt
+  1.25  rem = 20 px = 15   pt
+  1.5   rem = 24 px = 18   pt
+  2     rem = 32 px = 24   pt
+  3     rem = 48 px = 36   pt
+*/
+
+/* Set a base font size for the root HTML element. All 'rem' units will be relative to this. */
+html {
+  font-size: 16px; /* 16px em = 12pt font. This sets a base for rem units. Adjust this to scale the entire layout proportionally. */
+}
+
+/* Base Styles */
+body {
+  font-family: 'Roboto Condensed', Arial Narrow, sans-serif;
+  font-size: 0.916rem; /* Converted from 11pt (approx 14.66px / 16px) */
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+h1 {
+  font-size: 1.5rem; /* Converted from 18pt (approx 24px / 16px) */
+  color: #BAE042;
+  font-weight: bold;
+}
+
+/* Styling for the main page container to center it */
+.page {
+  max-width: 60rem; /* Converted from 960px (960px / 16px) */
+  margin: 0 auto; /* This centers the block-level element horizontally */
+}
+
+table {
+  background-color: #5C5959;
+  border-radius: 0.625rem; /* Converted from 10px (10px / 16px) */
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Styling for the first table row (containing the graphic) */
+table tr:first-child {
+  background-color: #6A6767; /* Lighter background to the first row only */
+}
+
+/* Ensure the graphic itself is a block element and not centered */
+table tr td img {
+  display: block;
+  margin-bottom: 0.75rem; /* Add margin below the image to create space */
+}
+
+/* Styling for the main title text */
+.title {
+  font-size: 2.2rem; /* 2.2rem × 16px = 35.2px */
+  margin-bottom: 0; /* Remove bottom margin to bring subtitle closer */
+}
+
+.title-main {
+  font-weight: bold;
+}
+
+.title-suffix {
+  color: #BAE042;
+}
+
+/* Styling for "Consulting Architects" subtitle */
+.subtitle {
+  font-size: 0.916rem; /* Converted from 11pt (approx 14.66px / 16px) */
+  margin-top: 0; /* Remove top margin to bring it closer to the main title */
+  margin-bottom: 1em; /* Kept in em as it relates to parent font size */
+}
+
+/* Styling for the new list items */
+.para-list {
+  list-style: disc; /* Re-enabled default bullet points */
+  padding-left: 1.5em; /* Kept in em as it relates to parent font size */
+  margin-top: 0; /* Removed default top margin for lists */
+  margin-bottom: 1em; /* Add some space below the list */
+}
+
+/* Ensure paragraph preceding a list has no bottom margin */
+.no-bottom-margin {
+  margin-bottom: 0;
+}
+
+/* Ensure list following a no-bottom-margin paragraph has no top margin */
+p.no-bottom-margin + ul.para-list {
+  margin-top: 0;
+}
+
+/* Styling for the table cell containing the image */
+table tr td:first-child {
+  padding: 0; /* Keep padding at 0 */
+}
+
+/* Ensure the image itself is a block element and not centered */
+table tr td img {
+  display: block;
+}
+
+/* Styling for hyperlinks within paragraphs */
+.para a {
+  color: #bbd2e6; /* Set standard hyperlink color */
+  text-decoration: none; /* Remove default underline */
+}
+
+.para a:hover {
+  text-decoration: underline; /* Add underline only on hover */
+}
+
+/* CSS for email obfuscation */
+.rtl-email {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+/* ------------------------------------------------------------------------------------------- */
 
 /* Mobile Styles */
-@media only screen and (max-width: 980px) {
-  table  { width: 100%; }
-  img    { width: 240px; }
-  .title { margin-left: 50px; }
-  h1     { margin-left: 30px; }
-  .para  { margin-left: 50px; margin-right: 50px; }
+@media only screen and (max-width: 979px) { /* Max-width can be px or converted to rem */
+  table {
+    width: 100%;
   }
+  img {
+    width: 15rem; /* Converted from 240px (240px / 16px) */
+  }
+  .title, .subtitle { /* Apply margin to both title and subtitle */
+    /* margin-left: 3.125rem; /* Converted from 50px (50px / 16px) */
+    margin-left: 1.875rem; /* Matches H1 below */
+  }
+  h1 {
+    margin-left: 1.875rem; /* Converted from 30px (30px / 16px) */
+  }
+  .para, .para-list { /* Apply margin to both paragraphs and lists */
+    margin-left: 3.125rem; /* Converted from 50px (50px / 16px) */
+    margin-right: 3.125rem; /* Converted from 50px (50px / 16px) */
+  }
+  .para-list li {
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+  }
+}
 
+/* ------------------------------------------------------------------------------------------- */
 
 /* Tablet Styles */
-@media only screen and (min-width: 981px) and (max-width: 1280px) {
-  table  { width: 960px; }
-  img    { width: 360px; }
-  .title { margin-left: 50px; }
-  h1     { margin-left: 30px; }
-  .para  { margin-left: 50px; margin-right: 50px; }
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
+  table {
+    width: 60rem; /* Converted from 960px (960px / 16px) */
   }
+  img {
+    width: 22.5rem; /* Converted from 360px (360px / 16px) */
+  }
+  .title, .subtitle { /* Apply margin to both title and subtitle */
+    /* margin-left: 3.125rem; /* Converted from 50px (50px / 16px) */
+    margin-left: 1.875rem; /* Matches H1 below */
+  }
+  h1 {
+    margin-left: 1.875rem; /* Converted from 30px (30px / 16px) */
+  }
+  .para, .para-list { /* Apply margin to both paragraphs and lists */
+    margin-left: 3.125rem; /* Converted from 50px (50px / 16px) */
+    margin-right: 3.125rem; /* Converted from 50px (50px / 16px) */
+  }
+  .para-list li {
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+  }
+}
 
+/* ------------------------------------------------------------------------------------------- */
 
 /* Desktop Styles */
-@media only screen and (min-width: 1281px) {
-  table  { width: 960px; }
-  img    { width: 480px; }
-  .title { margin-left: 100px; }
-  h1     { margin-left: 60px; }
-  .para  { margin-left: 100px; margin-right: 100px; }
+@media only screen and (min-width: 1280px) {
+  table {
+    width: 60rem; /* Converted from 960px (960px / 16px) */
   }
+  img {
+    width: 30rem; /* Converted from 480px (480px / 16px) */
+  }
+  .title, .subtitle { /* Apply margin to both title and subtitle */
+    /* margin-left: 6.25rem; /* Converted from 100px (100px / 16px) */
+    margin-left: 3.75rem; /* Matches H1 below */
+  }
+  h1 {
+    margin-left: 3.75rem; /* Converted from 60px (60px / 16px) */
+  }
+  .para, .para-list { /* Apply margin to both paragraphs and lists */
+    margin-left: 6.25rem; /* Converted from 100px (100px / 16px) */
+    margin-right: 6.25rem; /* Converted from 100px (100px / 16px) */
+  }
+  .para-list li {
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------- */

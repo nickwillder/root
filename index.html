@@ -2,60 +2,105 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8"/>
   <title>willder.com</title>
+
   <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://willder.com/">
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="willder.com: Consulting Architects specializing in housing developments, private housing, affordable housing, and sustainable design in the East Midlands, UK.">
+  <meta name="keywords" content="architects, consulting, housing, planning, project management, heritage, sustainable design, East Midlands, Nottingham, Derby, Leicester, UK">
+  <meta name="author" content="Sarah Boylan & Nick Willder">
+  <meta property="og:site_name" content="willder.com">
+  <meta property="og:title" content="willder.com - Consulting Architects">
+  <meta property="og:description" content="Consulting Architects specializing in housing developments, private housing, affordable housing, and sustainable design in the East Midlands, UK.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://willder.com/">
+  <meta property="og:image" content="https://willder.com/sarah.png">
+  <meta property="og:image:width" content="1015">
+  <meta property="og:image:height" content="1015"> <!-- Facebook prefers 1200×630 images (a 1.91:1 ratio) -->
+  <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@gnq">
+	<meta name="twitter:title" content="willder.com - Consulting Architects">
+	<meta name="twitter:description" content="Consulting Architects specializing in heritage design, planning applications, sustainable design, housing developments, private housing and affordable housing in the East Midlands, UK.">
+  <meta name="twitter:image" content="https://willder.com/sarah.png">
 </head>
 
-<body bgcolor="#000000">
+<body>
 
-<script type="text/javascript">
-  <!--
-    if (screen.width <= 360) {           /* try 699 */
-    document.location = "mobile.html";
-    }
-  //-->
-</script>
-
-<div class="page" align="center">
-<table>
-  <tr><td><img src="graphic.svg"/></td></tr>
-  <tr><td><p class="title"><b><font size="5">willder</font></b><font size="5" color="#BAE042">.com</font><br>Consulting Architects</p></td></tr>
-  <tr><td>
-    <h1>Area of operation</h1>
-      <p class="para">
-        East Midlands region, UK<br>
-        &nbsp;-&nbsp; Nottingham &amp; Nottinghamshire<br>
-        &nbsp;-&nbsp; Derby &amp; Derbyshire<br>
-        &nbsp;-&nbsp; Leicester &amp; Leicestershire
-      </p>
-    <h1>Main areas of expertise</h1>
-      <p class="para">
-        Housing developments<br>
-        One-off private housing<br>
-        Affordable housing<br>
-        Housing Associations<br>
-        Planning Applications<br>
-        Project Management<br>
-        Heritage context design<br>
-        Sustainable design
-      </p>
-    <h1>About</h1>
-      <p class="para">
-        Partners Sarah Boylan and Nick Willder have over 60 years experience in private
-        and public sector architecture, planning, development and project management.
-        They are now working solely on one-off commissions in the East Midlands region
-        for repeat clients and word-of-mouth recommendations.
-      </p>
-    <h1>Contact</h1>
-      <p class="para">
-      mail&#64;willder.com<br>
-      01617 000599
-      </p>
-  </td></tr>
-</table>
+<div class="page">
+  <table>
+    <tr>
+      <td><img src="graphic.svg" alt="Willder.com Consulting Architects Logo"/></td>
+    </tr>
+    <tr>
+      <td>
+        <p class="title">
+          <span class="title-main">willder</span><span class="title-suffix">.com</span>
+        </p>
+        <p class="subtitle">Consulting Architects</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h1>Area of operation</h1>
+        <p class="para no-bottom-margin">East Midlands region, UK</p>
+        <ul class="para-list">
+          <li>Nottingham &amp; Nottinghamshire</li>
+          <li>Derby &amp; Derbyshire</li>
+          <li>Leicester &amp; Leicestershire</li>
+        </ul>
+        <h1>Main areas of expertise</h1>
+        <ul class="para-list">
+          <li>Heritage context design</li>
+          <li>Sustainable design</li>
+          <li>Planning Applications</li>
+          <li>Project Management</li>
+          <li>Housing developments</li>
+          <li>One-off private housing</li>
+          <li>Affordable housing</li>
+          <li>Housing Associations</li>
+        </ul>
+        <h1>About</h1>
+        <p class="para">
+          Partners Sarah Boylan and Nick Willder have over 60 years experience in private
+          and public sector architecture, planning, development and project management.
+          They are now working solely on one-off commissions in the East Midlands region
+          for repeat clients and word-of-mouth recommendations.
+        </p>
+        <h1>Contact</h1>
+        <p class="para">
+          If you have a challenging local project with planning complications, heritage
+          concerns and sustainability as a core value, we may well be interested in
+          getting involved. Please drop us an email using the link below with some
+          details to start a no-obligation conversation with us.
+        </p>
+        <p class="para">
+          <a id="emailContactLink" href="#">
+            <span class="rtl-email">moc.redlliw@liam</span>
+          </a>
+          <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+              // Base64 encoded 'mailto:etc?subject=Web%20enquiry%3A%20'
+              // The subject "Web enquiry: " is URL-encoded as "Web%20enquiry%3A%20"
+              const encodedMailto = 'bWFpbHRvOm1haWxAd2lsbGRlci5jb20/c3ViamVjdD1XZWIlMjBlbnF1aXJ5JTNBJTIw';
+              const decodedMailto = atob(encodedMailto);
+              const emailLink = document.getElementById('emailContactLink');
+              if (emailLink) {
+                emailLink.href = decodedMailto;
+              }
+            });
+          </script>
+          <br>
+          01617 000599
+        </p>
+      </td>
+    </tr>
+  </table>
 </div>
-
 
 </body>
 </html>
